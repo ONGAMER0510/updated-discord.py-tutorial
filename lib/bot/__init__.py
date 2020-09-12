@@ -14,13 +14,13 @@ from discord.ext.commands import when_mentioned_or, command, has_permissions
 
 from ..db import db
 
-OWNER_IDS = [385807530913169426]
+OWNER_IDS = [721991163351138346]
 COGS = [path.split("\\")[-1][:-3] for path in glob("./lib/cogs/*.py")]
 IGNORE_EXCEPTIONS = (CommandNotFound, BadArgument)
 
 
 def get_prefix(bot, message):
-	prefix = db.field("SELECT Prefix FROM guilds WHERE GuildID = ?", message.guild.id)
+	prefix = db.field("SELECT Prefix FROM guilds WHERE GuildID = _", message.guild.id)
 	return when_mentioned_or(prefix)(bot, message)
 
 
@@ -80,10 +80,10 @@ class Bot(BotBase):
 		self.setup()
 
 		with open("./lib/bot/token.0", "r", encoding="utf-8") as tf:
-			self.TOKEN = tf.read()
+			self.NzQ4MDU0NDgxNzI3Mzg5Njk3.X0X2Bg.xPc-bZFudwWFIN2kRRcNBvybe3E = tf.read()
 
 		print("running bot...")
-		super().run(self.TOKEN, reconnect=True)
+		super().run(self.NzQ4MDU0NDgxNzI3Mzg5Njk3.X0X2Bg.xPc-bZFudwWFIN2kRRcNBvybe3E\, reconnect=True)
 
 	async def process_commands(self, message):
 		ctx = await self.get_context(message, cls=Context)
